@@ -15,6 +15,19 @@ public class TimeZoneTranslatorTest {
 	}
 
 	@Test
+	public void testDateTime() {
+		
+		DateTime dateTime = new DateTime(2000, 1, 1, 0, 0, 0);
+		DateTime dateTimeString = new DateTime(dateTime.toString());
+		
+		assertEquals(dateTime.toString(), dateTimeString.toString());
+		
+		
+	}
+
+	
+	
+	@Test
 	public void testShiftTimeZone() {
 		//fail("Not yet implemented");
 		DateTime dateTime = new DateTime(2018, 8, 27, 8, 0, 0);
@@ -30,8 +43,6 @@ public class TimeZoneTranslatorTest {
 
 	@Test
 	public void testShiftEventTimeZone() {
-//		fail("Not yet implemented");
-		
 		
 		DateTime LectureStart = new DateTime(2018, 8, 27, 8, 0, 0);
 		DateTime LectureEnd = new DateTime(2018, 8, 27, 9, 45, 0);
@@ -44,9 +55,7 @@ public class TimeZoneTranslatorTest {
 				LectureEnd,
 				new HashSet<>(Arrays.asList(johannes, ragnar)),
 				HC218);
-		
-		
-		
+				
 		assertEquals(TimeZoneTranslator.shiftEventTimeZone(firstOomLecture, TimeZone.CENTRAL_EUROPEAN_TIME, TimeZone.US_EASTERN).toString(),
 				  "Event label:\tOOM 2018 Lecture 1\nStart date:\t2018-08-27 02:00:00\nEnd date:\t2018-08-27 03:45:00\nAttendees:"
 							+ "\t[Johannes Schmidt, Ragnar Nohre]\nPlace:\t\tHc218"
@@ -56,10 +65,7 @@ public class TimeZoneTranslatorTest {
 		  "Event label:\tOOM 2018 Lecture 1\nStart date:\t2018-08-27 02:00:00\nEnd date:\t2018-08-27 03:45:00\nAttendees:"
 	+ "\t[Johannes Schmidt, Ragnar Nohre]\nPlace:\t\tHc218"
 		 * 
-		 * */
-		
-		
-		
+		 * */	
 	}
 
 }
