@@ -22,15 +22,15 @@ public class TimeZoneTranslatorTest {
 		assertEquals(dateTime.toString(), dateTimeString.toString());
 
 		DateTime dateTime2 = new DateTime(999, 10, 10, 0, 0, 0);
-		DateTime dateTimeString2 = new DateTime(dateTime.toString());		
+		DateTime dateTimeString2 = new DateTime(dateTime2.toString());		
 		assertEquals(dateTime2.toString(), dateTimeString2.toString());
 		
 		DateTime dateTime3 = new DateTime(99, 1, 21, 0, 0, 0);
-		DateTime dateTimeString3 = new DateTime(dateTime.toString());		
+		DateTime dateTimeString3 = new DateTime(dateTime3.toString());		
 		assertEquals(dateTime3.toString(), dateTimeString3.toString());
 		
 		DateTime dateTime4 = new DateTime(9, 11, 1, 0, 0, 0);
-		DateTime dateTimeString4 = new DateTime(dateTime.toString());		
+		DateTime dateTimeString4 = new DateTime(dateTime4.toString());		
 		assertEquals(dateTime4.toString(), dateTimeString4.toString());
 		
 	}
