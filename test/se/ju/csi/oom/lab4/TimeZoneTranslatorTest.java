@@ -67,7 +67,7 @@ public class TimeZoneTranslatorTest {
 				HC218);
 				
 		assertEquals(TimeZoneTranslator.shiftEventTimeZone(firstOomLecture, TimeZone.CENTRAL_EUROPEAN_TIME, TimeZone.US_EASTERN).toString(),
-				  "Event label:\tOOM 2018 Lecture 1\nStart date:\t2018-08-27 02:00:00\nEnd date:\t2018-08-27 03:45:00\nAttendees:"
+				  "Event label:\tOOM 2018 Lecture 1\nStart date:\t2018-08-27 02:00\nEnd date:\t2018-08-27 03:45\nAttendees:"
 							+ "\t[Johannes Schmidt, Ragnar Nohre]\nPlace:\t\tHc218"
 	);
 	
