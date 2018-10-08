@@ -18,13 +18,25 @@ public class TimeZoneTranslator {
 			targetHour = 24 + targetHour;
 			targetDay--;
 		}
+		if(targetHour > 24) {
+			targetHour = targetHour - 24;
+			targetDay++;
+		}
 		if(targetDay == 0) {
 			targetDay = 31;
 			targetMonth--;
-		}			
+		}
+		if(targetDay == 32) {
+			targetDay = 1;
+			targetMonth++;
+		}
 		if(targetMonth == 0) {
 			targetMonth = 12;
 			targetYear--;
+		}
+		if(targetMonth == 13) {
+			targetMonth = 1;
+			targetYear++;
 		}
 			
 			
@@ -32,8 +44,8 @@ public class TimeZoneTranslator {
 				targetMonth,
 				targetDay,
 				targetHour,
-				inputDate.getMinute(),
-				inputDate.getSecond());
+				inputDate.getMinute());
+//				inputDate.getSecond())
 		
 		return targetDateTime;
 	}
@@ -46,8 +58,8 @@ public class TimeZoneTranslator {
 	}
 	
 	public static void main(String [ ] args) {
-		DateTime LectureStart = new DateTime(2018, 8, 27, 8, 0, 0);
-		DateTime LectureEnd = new DateTime(2018, 8, 27, 9, 45, 0);
+		DateTime LectureStart = new DateTime(2018, 8, 27, 8, 0);
+		DateTime LectureEnd = new DateTime(2018, 8, 27, 9, 45);
 		Person johannes = new Person("Johannes Schmidt");
 		Person ragnar = new Person("Ragnar Nohre");
 		Place HC218 = new Place("Hc218",57.7785672,14.1614833,20.0);

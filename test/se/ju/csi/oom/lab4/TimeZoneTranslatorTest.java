@@ -17,19 +17,19 @@ public class TimeZoneTranslatorTest {
 	@Test
 	public void testDateTime() {
 		
-		DateTime dateTime = new DateTime(2000, 1, 1, 0, 0, 0);
+		DateTime dateTime = new DateTime(2000, 1, 1, 0, 0);
 		DateTime dateTimeString = new DateTime(dateTime.toString());		
 		assertEquals(dateTime.toString(), dateTimeString.toString());
 
-		DateTime dateTime2 = new DateTime(999, 10, 10, 0, 0, 0);
+		DateTime dateTime2 = new DateTime(999, 10, 10, 0, 0);
 		DateTime dateTimeString2 = new DateTime(dateTime2.toString());		
 		assertEquals(dateTime2.toString(), dateTimeString2.toString());
 		
-		DateTime dateTime3 = new DateTime(99, 1, 21, 0, 0, 0);
+		DateTime dateTime3 = new DateTime(99, 1, 21, 0, 0);
 		DateTime dateTimeString3 = new DateTime(dateTime3.toString());		
 		assertEquals(dateTime3.toString(), dateTimeString3.toString());
 		
-		DateTime dateTime4 = new DateTime(9, 11, 1, 0, 0, 0);
+		DateTime dateTime4 = new DateTime(9, 11, 1, 0, 0);
 		DateTime dateTimeString4 = new DateTime(dateTime4.toString());		
 		assertEquals(dateTime4.toString(), dateTimeString4.toString());
 		
@@ -40,13 +40,13 @@ public class TimeZoneTranslatorTest {
 	@Test
 	public void testShiftTimeZone() {
 		//fail("Not yet implemented");
-		DateTime dateTime = new DateTime(2018, 8, 27, 8, 0, 0);
+		DateTime dateTime = new DateTime(2018, 8, 27, 8, 0);
 				
-		assertEquals(TimeZoneTranslator.shiftTimeZone(dateTime, 1, -5).toString(), "2018-08-27 02:00:00");
+		assertEquals(TimeZoneTranslator.shiftTimeZone(dateTime, 1, -5).toString(), "2018-08-27 02:00");
 		
-		DateTime dateTime2 = new DateTime(2016, 1, 1, 6, 0, 0);
+		DateTime dateTime2 = new DateTime(2016, 1, 1, 6, 0);
 		
-		assertEquals(TimeZoneTranslator.shiftTimeZone(dateTime2, 1, -8).toString(), "2015-12-31 21:00:00");
+		assertEquals(TimeZoneTranslator.shiftTimeZone(dateTime2, 1, -8).toString(), "2015-12-31 21:00");
 				
 	}
 	
@@ -54,8 +54,8 @@ public class TimeZoneTranslatorTest {
 	@Test
 	public void testShiftEventTimeZone() {
 		
-		DateTime LectureStart = new DateTime(2018, 8, 27, 8, 0, 0);
-		DateTime LectureEnd = new DateTime(2018, 8, 27, 9, 45, 0);
+		DateTime LectureStart = new DateTime(2018, 8, 27, 8, 0);
+		DateTime LectureEnd = new DateTime(2018, 8, 27, 9, 45);
 		Person johannes = new Person("Johannes Schmidt");
 		Person ragnar = new Person("Ragnar Nohre");
 		Place HC218 = new Place("Hc218",57.7785672,14.1614833,20.0);
